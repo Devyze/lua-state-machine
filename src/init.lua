@@ -55,7 +55,7 @@ function StateMachine.new(options)
 	self.Current = initial
 	self.States = states
 	self.Events = events
-	self.OnStateChanged = options.OnStateChange
+	self.OnStateChange = options.OnStateChange
 	
 	for _, state in pairs(self.States) do
 		callHandler(state.Init, self, initial)
